@@ -32,6 +32,7 @@ void split(Node*& in, Node*& odds, Node*& evens)
         } else {
             odds = nullptr;
         }
+				
     } else {
         odds = in;
         in = in->next;
@@ -41,14 +42,9 @@ void split(Node*& in, Node*& odds, Node*& evens)
             evens = nullptr;
         }
     }
-
-    if (in != nullptr) {
-        Node* temp = in;
-        in = in->next;
-        temp->next = nullptr;
-        delete temp;
-    }
 }
+
+
 
 /* If you needed a helper function, write it here */
 // WRITE YOUR CODE HERE
